@@ -1,0 +1,7 @@
+export const BLOCK={AIR:0,GRASS:1,DIRT:2,STONE:3,BEDROCK:4,SAND:5,WOOD:6,LEAVES:7,COAL:8,PLANKS:9,COBBLE:10,GLASS:11,WATER:12};
+export const FACE={PX:0,NX:1,PY:2,NY:3,PZ:4,NZ:5};
+const t=(n)=>n;
+export const REG={
+0:{name:'Air',solid:false,transparent:true,collidable:false,tex:{}},1:{name:'Grass',solid:true,transparent:false,collidable:true,tex:{top:t('grassTop'),bottom:t('dirt'),side:t('grassSide')}},2:{name:'Dirt',solid:true,transparent:false,collidable:true,tex:{all:t('dirt')}},3:{name:'Stone',solid:true,transparent:false,collidable:true,tex:{all:t('stone')}},4:{name:'Bedrock',solid:true,transparent:false,collidable:true,tex:{all:t('bedrock')}},5:{name:'Sand',solid:true,transparent:false,collidable:true,tex:{all:t('sand')}},6:{name:'Wood',solid:true,transparent:false,collidable:true,tex:{top:t('woodTop'),bottom:t('woodTop'),side:t('woodSide')}},7:{name:'Leaves',solid:true,transparent:true,collidable:true,tex:{all:t('leaves')}},8:{name:'Coal Ore',solid:true,transparent:false,collidable:true,tex:{all:t('coalOre')}},9:{name:'Planks',solid:true,transparent:false,collidable:true,tex:{all:t('planks')}},10:{name:'Cobble',solid:true,transparent:false,collidable:true,tex:{all:t('cobble')}},11:{name:'Glass',solid:true,transparent:true,collidable:true,tex:{all:t('glass')}},12:{name:'Water',solid:false,transparent:true,collidable:false,tex:{all:t('water')}}
+};
+export const isSolid=(id)=>!!REG[id]?.solid; export const isCollidable=(id)=>!!REG[id]?.collidable;

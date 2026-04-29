@@ -1,0 +1,1 @@
+export class HUD{constructor(){this.el=document.createElement('div');this.el.className='hud';document.body.appendChild(this.el);} update(s){this.el.textContent=`FPS ${s.fps} | Pos ${s.pos} | Chunk ${s.chunk} | Loaded ${s.loaded} | Queue ${s.queue} | Selected ${s.selected}`;}}

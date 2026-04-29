@@ -1,0 +1,2 @@
+import {BLOCK} from './BlockRegistry';
+export class VillageGenerator{constructor(seed){this.seed=seed;} hasVillage(cx,cz){const n=Math.abs((cx*928371+cz*12377+this.seed*97)%31);return n===0;} stamp(world,cx,cz,surfaceY){if(surfaceY<world.seaLevel+2)return;for(let x=2;x<14;x++)for(let z=7;z<9;z++)world.setLocal(cx,cz,x,surfaceY,z,BLOCK.COBBLE);for(let x=4;x<12;x++)for(let z=2;z<7;z++)for(let y=1;y<5;y++){const edge=x===4||x===11||z===2||z===6;if(edge)world.setLocal(cx,cz,x,surfaceY+y,z,BLOCK.PLANKS);}world.setLocal(cx,cz,7,surfaceY+2,2,BLOCK.GLASS);} }
