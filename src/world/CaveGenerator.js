@@ -1,0 +1,1 @@
+export class CaveGenerator{constructor(noise){this.noise=noise;} carve(x,y,z,surface){if(y>surface-6)return false;const density=this.noise.value3(x*0.045,y*0.06,z*0.045);const depthBias=Math.max(0,(surface-y)/40);return density>0.62+0.12*(1-depthBias);} }

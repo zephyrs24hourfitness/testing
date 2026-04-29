@@ -1,0 +1,1 @@
+import './styles.css';import {App} from './core/App';const app=document.getElementById('app');app.innerHTML='<div class="overlay">Click to lock pointer. WASD move, Shift sprint, Space jump, LMB break, RMB place, 1-8 hotbar.</div>';new App(app);

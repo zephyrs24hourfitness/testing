@@ -1,0 +1,2 @@
+import * as THREE from 'three';
+export function createSky(){const g=new THREE.SphereGeometry(500,16,16);const m=new THREE.ShaderMaterial({side:THREE.BackSide,vertexShader:'varying vec3 v;void main(){v=position;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0);}',fragmentShader:'varying vec3 v;void main(){float h=normalize(v).y*0.5+0.5;gl_FragColor=vec4(mix(vec3(0.7,0.85,1.0),vec3(0.3,0.55,0.9),h),1.0);}'});return new THREE.Mesh(g,m);} 
